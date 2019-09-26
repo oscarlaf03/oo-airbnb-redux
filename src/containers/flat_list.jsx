@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Flat from '../components/flat.jsx';
+import Flat from './flat.jsx';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { setFlats } from '../actions';
@@ -28,6 +28,7 @@ class FlatList extends Component {
     //     }]
     // }
 
+   
     render () {
         return(
             <div className='flat-list col-sm-7 card-category'> 
@@ -50,5 +51,7 @@ function mapReduxStateToProps(reduxState) {
         flats: reduxState.flats
     };
 }
+
+
 
 export default connect(mapReduxStateToProps, mapDispatchToProps) (FlatList);

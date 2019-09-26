@@ -6,9 +6,11 @@ import App from './components/app.jsx';
 import { Provider } from 'react-redux';
 import { createStore, combineReducers } from 'redux';
 import flatsReducer from './reducers/flats_reducer.js';
+import selectedFlatReducer from './reducers/selected_flat_reducer.js';
 
 const reducers = combineReducers({
-  flats: flatsReducer
+  flats: flatsReducer,
+  selectedFlat: selectedFlatReducer
 });
 
 // const root = document.getElementById('root');
